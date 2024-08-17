@@ -31,6 +31,18 @@ def turtlePenUp():
 def turtlePenDown():
     instanceTurtle.pendown()
 
+def redPen():
+    instanceTurtle.color("red")
+
+def bluePen():
+    instanceTurtle.color("blue")
+
+def greenPen():
+    instanceTurtle.color("green")
+
+def blackPen():
+    instanceTurtle.color("black")
+
 drawingBoard.listen()
 drawingBoard.onkey(fun=turtleForward,key="space")
 drawingBoard.onkey(fun=rotateRight, key="Down")
@@ -39,5 +51,9 @@ drawingBoard.onkey(fun=clearScreen, key="c")
 drawingBoard.onkey(fun=turtleReturnHome, key="o")
 drawingBoard.onkey(fun=turtlePenUp, key="u")
 drawingBoard.onkey(fun=turtlePenDown, key="d")
+drawingBoard.onkey(fun=redPen, key="r")
+drawingBoard.onkey(fun=bluePen, key="b")
+drawingBoard.onkey(fun=greenPen, key="g")
+drawingBoard.onkey(fun=blackPen, key="s")
 
 turtle.mainloop()
